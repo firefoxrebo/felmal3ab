@@ -1,0 +1,335 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* Layout */
+
+body
+{
+	width: 1280px;
+	height: 720px;
+	background-image: url(../images/background.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    direction: rtl !important;
+}
+
+#pluginObjectTVMW, #pluginObjectNNavi, #pluginObjectNetwork {
+	display: block;
+	height:0;
+}
+
+div.tilesWrapper {
+	width: 1220px;
+	height: 620px;
+	margin: 30px auto 0 auto;
+}
+
+    div.upperTiles {
+        height: 480px;
+    }
+
+        div.tile {
+            position: relative;
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+        
+        div.tile:hover, div.tile.current {
+        	border: solid 3px orange;
+        }
+
+            div.tileIcon {
+                width: 45px;
+                height: 45px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: url(../images/tileicons.png) no-repeat center 6px;
+            }
+
+            div.upcomingMatchesTileIcon {
+                background: #b9a248 url(../images/tileicons.png) no-repeat center 6px;
+            }
+
+            div.galleryTileIcon {
+                background: #7dac18 url(../images/tileicons.png) no-repeat center -57px;
+            }
+
+            div.videoTileIcon {
+                background: #ac1818 url(../images/tileicons.png) no-repeat center -120px;
+            }
+
+            div.plus2TileIcon {
+                background: #ffa200 url(../images/tileicons.png) no-repeat center -177px;
+            }
+
+            div.statisticsTileIcon {
+                background: #a318ac url(../images/tileicons.png) no-repeat center -237px;
+            }
+
+        div.upperTiles div.rightColumnTiles {
+            float: right;
+            width: 805px;
+            height: 480px;
+            position:relative;
+            -webkit-perspective: 800px;
+        }
+
+            div.newsTile {
+                width: 799px;
+                height: 474px;
+                border: solid 3px transparent;
+                position: absolute;
+                -webkit-transform-style: preserve-3d;
+            }
+
+            div.newsTile.flipped {
+                -webkit-transform: rotateY( 180deg );
+            }
+
+                div.newsItem, div.newsDetail {
+                    width: 799px;
+                    height: 474px;
+                    position: absolute;
+                    -webkit-backface-visibility: hidden;
+                }
+
+                div.newsDetail {
+                	padding: 15px;
+                	width: 775px;
+                	height: 444px;
+                    background: #328bff;
+                    -webkit-transform: rotateY( 180deg );
+                }
+                
+                	div.newsDetail h1 {
+                		color: #FFF;
+                		font-size: 1.5em;
+                	}
+
+                div.newsLabelWrapper {
+                    position: relative;
+                    top: -69px
+                }
+
+                    a.newsLabel:link, a.newsLabel:visited {
+                        display: block;
+                        width: 721px;
+                        height: 47px;
+                        padding: 18px 20px 0 0;
+                        background: url(../images/newslabel.png) no-repeat right top;
+                        color: #FFF;
+                        font-size: 1.4em;
+                        text-decoration: none;
+                        float: right;
+                    }
+
+                    a.newsTileIcon:link, a.newsTileIcon:visited {
+                        display: block;
+                        width: 46px;
+                        height: 46px;
+                        margin: 7px 0 0 10px;
+                        background: url(../images/newstileicon.png) no-repeat right top;
+                        float: left;
+                    }
+
+        div.upperTiles div.leftColumnTiles {
+            float: left;
+            width: 405px;
+            height: 480px;
+        }
+
+            div.upcomingMatchesTile {
+            	border: solid 3px transparent;
+                height: 307px;
+            }
+
+                div.upcomingMatchesTile header {
+                    height: 25px;
+                    background: #665928;
+                    padding: 10px;
+                }
+
+                div.upcomingMatchesTile header h1 {
+                    color: #FFF;
+                }
+
+                div.upcomingMatchesTile header img {
+                    vertical-align: middle;
+                    margin: 0 0 0 7px;
+                }
+
+                div.upcomingMatchesTile div.matchItem {
+                    height: 65px;
+                    padding: 20px;
+                    background: #FFF;
+                }
+
+                    div.upcomingMatchesTile div.matchItem time {
+                        color: #847434;
+                        display: block;
+                        margin: 0 0 5px 0;
+                    }
+
+                    div.teams a.team {
+                        display: block;
+                        float: right;
+                        color: #847434;
+                        font-weight: bold;
+                        font-size: 0.75em;
+                        text-decoration: none;
+                        text-align: center;
+                    }
+
+                    div.teams a.team img {
+                        display: block;
+                        margin: 0 0 5px 0;
+                    }
+
+                    div.score {
+                        float: right;
+                        margin: 0 20px;
+                        padding: 5px 0 0 0;
+                        color: #847434;
+                        font-weight: bold;
+                        font-size: 1.2em;
+                    }
+
+                    div.tv {
+                        height: 28px;
+                    }
+
+                    div.details {
+                        float: left;
+                    }
+
+                        div.details a {
+                            display: inline-block;
+                            float: left;
+                            margin: 0 5px 0 0;
+                            color: #847434;
+                            font-weight: bold;
+                            font-size: 1.1em;
+                            text-decoration: none;
+                        }
+
+                div.upcomingMatchesTile div.grey {
+                    background: #F1F1F1;
+                    height: 72px;
+                }
+
+                div.upcomingMatchesTile a.leagueTable, div.upcomingMatchesTile a.allMatches {
+                    display: block;
+                    float: right;
+                    width: 182px;
+                    height: 33px;
+                    background: #665928;
+                    color: #FFF;
+                    padding: 12px 0 0 0;
+                    text-align: center;
+                    text-decoration: none;
+                }
+
+                div.upcomingMatchesTile a.allMatches {
+                    background: #847434;
+                }
+
+            div.mediaTile {
+                margin: 10px 0 0 0;
+                height: 157px;
+            }
+
+                div.galleryTile {
+                    width: 191px;
+                    float: right;
+                    height: 151px;
+                    border: solid 3px transparent;
+                }
+
+                div.videoTile {
+                    width: 191px;
+                    float: left;
+                    height: 151px;
+                    border: solid 3px transparent;
+                }
+
+    div.lowerTiles {
+        margin: 10px 0 0 0;
+        height: 130px;
+    }
+
+        div.plus2Tile, div.statisticsTile {
+        	border: solid 3px transparent;
+            padding: 15px;
+            width: 569px;
+            height: 94px;
+            float: right;
+            background-clip: padding-box;
+        }
+
+        div.plus2Tile {
+            background-image: url(../images/plus2bg.jpg);
+        }
+
+        div.statisticsTile {
+            float: left;
+            background-image: url(../images/statisticsbg.jpg);
+        }
+
+        div.statisticsTile h1, div.plus2Tile h1 {
+            color: #FFF;
+            font-size: 1.3em;
+        }
+
+        div.statisticsTile p, div.plus2Tile p {
+            color: #FFF;
+            width: 550px;
+        }
+
+div.helpBar {
+	background: #111;
+	height: 40px;
+	width: 1280px;
+	position: fixed;
+	bottom:0;
+	right: 0;
+}
+	.helpBar a:link, .helpBar a:visited {
+		display: block;
+		height: 30px;
+		padding: 12px 20px 0 20px; 
+		color: #FFF;
+		text-decoration: none;
+		float: left;
+		border-right: solid 1px #222;
+	}
+	
+	.helpBar a.menu:link, .helpBar a.menu:visited {
+		padding: 12px 35px 0 10px; 
+		background: url(../images/menu.png) no-repeat 75px center;
+		float:right;
+		border-left: solid 1px #222;
+	}
+	
+	.helpBar a.btnreturn {
+		padding: 12px 30px 0 10px; 
+		background: url(../images/btnreturn.png) no-repeat 48px center;
+	}

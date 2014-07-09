@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>في الملعب</title>
+
+		<!-- TODO : Common API -->
+		<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+		<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+		<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/Plugin.js"></script>
+		<script type='text/javascript' src="$MANAGER_WIDGET/Common/Plugin/NNavi.js"></script>
+
+		<!-- TODO : Style sheets code -->
+		<link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
+
+		<!-- TODO: Plug-ins -->
+		<object id="pluginObjectTVMW" border=0 classid="clsid:SAMSUNG-INFOLINK-TVMW"></object>
+		<object id="pluginObjectNNavi" border=0 classid="clsid:SAMSUNG-INFOLINK-NNAVI"></object>
+		<object id="pluginObjectNetwork" border="0" classid="clsid:SAMSUNG-INFOLINK-NETWORK"></object>
+	</head>
+
+	<body>
+		<!-- TODO: your code here -->
+		<div class="tilesWrapper">
+            <div class="upperTiles">
+                <div class="rightColumnTiles">
+                    <div class="tile newsTile">
+                        <div class="newsItem">
+                            <div class="newsImage">
+                                <img src="app/images/newssample.jpg" width="100%" height="474" />
+                            </div>
+                            <div class="newsLabelWrapper">
+                                <a href="#" class="newsLabel">البرازيل تهزم كولومبيا بمساعدة لويز و تصعد للمربع الذهبي</a>
+                                <a href="#" class="newsTileIcon"></a>
+                            </div>
+                        </div>
+                        <div class="newsDetail">
+							<h1>البرازيل تهزم كولومبيا بمساعدة لويز و تصعد للمربع الذهبي</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="leftColumnTiles">
+                    <div class="tile upcomingMatchesTile">
+                        <header>
+                            <h1><img src="app/images/upcomingmatchesheadericon.png" /> مباريات اليوم</h1>
+                        </header>
+                        <div class="matchItem">
+                            <time>18:00</time>
+                            <div class="teams">
+                                <a href="" class="team">
+                                    <img src="app/images/sampleteam1.jpg" />
+                                    <span>الارجنتين</span>
+                                </a>
+                                <div class="score">
+                                    1 : 0
+                                </div>
+                                <a class="team" href="">
+                                    <img src="app/images/sampleteam4.jpg" />
+                                    <span>بلجيكا</span>
+                                </a>
+                            </div>
+                            <div class="details">
+                                <div class="tv">
+                                    <a href=""><img src="app/images/sampletv1.png" alt=""/></a>
+                                    <a href=""><img src="app/images/sampletv2.png" alt=""/></a>
+                                    <a href=""><img src="app/images/sampletv4.png" alt=""/></a>
+                                </div>
+                                <div class="matchInfo">
+                                    <a href=""><img src="app/images/matchdone.jpg" alt=""/></a>
+                                    <a href=""><img src="app/images/redcard.png" alt=""/></a>
+                                    <a href="">0</a>
+                                    <a href=""><img src="app/images/yellowcard.png" alt=""/></a>
+                                    <a href="">4</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="matchItem grey">
+                            <time>22:00</time>
+                            <div class="teams">
+                                <a href="" class="team">
+                                    <img src="app/images/sampleteam3.jpg" />
+                                    <span>هولندا</span>
+                                </a>
+                                <div class="score">
+                                    0 : 0
+                                </div>
+                                <a class="team" href="">
+                                    <img src="app/images/sampleteam2.jpg" />
+                                    <span>كوستاريكا</span>
+                                </a>
+                            </div>
+                            <div class="details">
+                                <div class="tv">
+                                    <a href=""><img src="app/images/sampletv2.png" alt=""/></a>
+                                    <a href=""><img src="app/images/sampletv3.png" alt=""/></a>
+                                </div>
+                                <div class="matchInfo">
+                                    <a href=""><img src="app/images/matchinprogress.jpg" alt=""/></a>
+                                    <a href=""><img src="app/images/redcard.png" alt=""/></a>
+                                    <a href="">0</a>
+                                    <a href=""><img src="app/images/yellowcard.png" alt=""/></a>
+                                    <a href="">1</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="leagueTable">جدول البطولة</a>
+                        <a href="" class="allMatches">كل المباريات</a>
+                        <div class="tileIcon upcomingMatchesTileIcon"></div>
+                    </div>
+                    <div class="mediaTile">
+                        <div class="tile videoTile">
+                            <img width="100%" height="100%" src="app/images/videosample.jpg" />
+                            <div class="tileIcon videoTileIcon"></div>
+                        </div>
+                        <div class="tile galleryTile">
+                            <img width="100%" height="100%" src="app/images/gallerysample.jpg" />
+                            <div class="tileIcon galleryTileIcon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lowerTiles">
+                <div class="tile plus2Tile">
+                    <h1>الارجنتين و بلجيكا</h1>
+                    <p>هذه الاعادة لمباراة الارجنتين و بلجيكا و التي انتهت في تمام الثامنة و الربع بفوز الارجنتين على بلجيكا بعد اداء هزيل كالعادة في مونديال ٢٠١٤ و بذلك تصعد لمواجهة الفائز من مباراة هولندا و كوستاريكا</p>
+                    <div class="tileIcon plus2TileIcon"></div>
+                </div>
+                <div class="tile statisticsTile">
+                    <h1>احصائيات البطولة</h1>
+                    <p>تحتوي الاحصائيات على كل المعلومات المطلوبة معرفتها عن البطولة التي اخترتها من ترتيب الفرق و الهدافين و الكروت الممنوحة اثناء اللعب اهم الاهداف و جملها و غيرها الكثير من الاحصائيات من فضلك قم باختيار بطولتك من القائمة الرئيسية</p>
+                    <div class="tileIcon statisticsTileIcon"></div>
+                </div>
+            </div>
+		</div>
+		<div class="helpBar">
+			<a href="#" class="menu">الرئيسية</a>
+			<a href="#" class="btnreturn">عودة</a>
+		</div>
+		<!-- TODO : JavaScript code -->
+		<script type="text/javascript" src="app/javascript/Tile.js"></script>
+		<script type="text/javascript" src="app/javascript/Main.js"></script>
+	</body>
+</html>
